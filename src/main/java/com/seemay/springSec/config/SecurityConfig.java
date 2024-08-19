@@ -34,6 +34,9 @@ public class SecurityConfig {
         // Making Http Stateless - to make this work on browser comment out formLogin()
         // httpSecurity.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
+        // OAuth 2
+        httpSecurity.oauth2Login(Customizer.withDefaults());
+
         return httpSecurity.build();
     }
 
